@@ -1,6 +1,7 @@
 --Показать работников у которых нет почты или почта не в корпоративном домене (домен dualbootpartners.com)
 SELECT * FROM employees e
-WHERE email NOT LIKE '%@dualbootpartners.com';
+WHERE email NOT LIKE '%@dualbootpartners.com' OR email IS NULL;
+
 
 --Получить список работников нанятых в последние 30 дней
 SELECT * FROM employees e 
